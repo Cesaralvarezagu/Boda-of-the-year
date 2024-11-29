@@ -10,37 +10,54 @@
         padding: 0;
         height: 100%;
         overflow-x: hidden;
+        scroll-behavior: smooth; /* Transición suave en el scroll */
     }
     .section {
-        height: 100vh; /* Altura completa de la ventana */
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         color: white;
         font-size: 2rem;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out; /* Transición suave */
     }
     .parallax {
         background-attachment: fixed;
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        width: 100%; 
+        width: 100%;
     }
     .section1 {
-        background-image: url('IMG_3528.jpg');
+        background-image: url('IRL_3528.jpg');
     }
     .section2 {
         background-image: url('IMG_3553.jpg');
     }
     .section3 {
-        background-image: url('IMG_3555.jpg');
+        background-image: url('IRL_3555.jpg');
     }
-</style>
-
-        }
+    .visible {
+        opacity: 1;
+    }
     </style>
 </head>
+    <script>
+    window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                section.classList.add('visible');
+            } else {
+                section.classList.remove('visible');
+            }
+        });
+    });
+</script>
+
 <body>
 
     <div class="section section1 parallax">
