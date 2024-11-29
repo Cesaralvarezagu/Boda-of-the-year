@@ -5,24 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestra Boda</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
-            text-align: center;
-            padding: 50px;
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
         }
-        h1 {
-            font-size: 3rem;
+        .section {
+            height: 100vh; /* Ocupa toda la pantalla */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
-        p {
-            font-size: 1.5rem;
+        .parallax {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        .section1 {
+            background: url('imagen1.jpg') no-repeat center center;
+        }
+        .section2 {
+            background: url('imagen2.jpg') no-repeat center center;
+        }
+        .section3 {
+            background: url('imagen3.jpg') no-repeat center center;
         }
     </style>
 </head>
 <body>
-    <h1>¡Nos Casamos!</h1>
-    <p>Fecha: [Introduce la fecha]</p>
-    <p>Ubicación: [Introduce la ubicación]</p>
+
+    <div class="section section1 parallax">
+        <h1>¡Bienvenidos a nuestra boda!</h1>
+    </div>
+
+    <div class="section section2 parallax">
+        <h1>Fecha: [Introduce la fecha]</h1>
+    </div>
+
+    <div class="section section3 parallax">
+        <h1>Ubicación: [Introduce la ubicación]</h1>
+    </div>
+
 </body>
 </html>
