@@ -4,60 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestra Boda</title>
-<style>
-    body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-    }
-    .section {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-size: 2rem;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        transition: opacity 1.5s ease-in-out;
-    }
-    .parallax {
-        background-attachment: fixed;
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+        }
+        .section {
+            height: 100vh; /* Ocupa toda la pantalla */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .parallax {
+          background-attachment: fixed;
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
         width: 100%;
-    }
-    .section1 {
-        background-image: url('IMG_3528.jpg');
-    }
-    .section2 {
-        background-image: url('IMG_3553.jpg');
-    }
-    .section3 {
-        background-image: url('IMG_3555.jpg');
-    }
-    .visible {
-        opacity: 1;
-    }
+        }
+        .section1 {
+            background: url('IMG_3528.jpg') no-repeat center center;
+        }
+        .section2 {
+            background: url('IMG_3553.jpg') no-repeat center center;
+        }
+        .section3 {
+            background: url('IMG_3555.jpg') no-repeat center center;
+        }
     </style>
 </head>
-    <script>
-    window.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('.section');
-        sections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                section.classList.add('visible');
-            } else {
-                section.classList.remove('visible');
-            }
-        });
-    });
-</script>
-
 <body>
 
     <div class="section section1 parallax">
